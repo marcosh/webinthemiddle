@@ -1,0 +1,6 @@
+{
+    "require": {
+        "phly/http": "0.11.*",
+        "guzzlehttp/guzzle": "~5.0"
+    }
+}
