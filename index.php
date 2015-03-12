@@ -36,7 +36,7 @@ $server = new Server(
                 $request->getMethod(),
                 $request->getUri()->withPort((int) $queryString['forward'])//remove cast when pull request accepted
             );
-            /*$clientResponse = $client->send($clientRequest);*/
+            //$clientResponse = $client->send($clientRequest);
         }
     },
     $request,

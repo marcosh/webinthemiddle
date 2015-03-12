@@ -4,20 +4,20 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a5d6162181093ec2925237f32507f661",
+    "hash": "4f26c93f1c7ffeb5c41ebe839826daf8",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
-            "version": "5.2.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "475b29ccd411f2fa8a408e64576418728c032cfa"
+                "reference": "589f1878e785a33f537a2db606a23f09f822d5c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/475b29ccd411f2fa8a408e64576418728c032cfa",
-                "reference": "475b29ccd411f2fa8a408e64576418728c032cfa",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/589f1878e785a33f537a2db606a23f09f822d5c7",
+                "reference": "589f1878e785a33f537a2db606a23f09f822d5c7",
                 "shasum": ""
             },
             "require": {
@@ -62,7 +62,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-01-28 01:03:29"
+            "time": "2015-03-05 17:58:10"
         },
         {
             "name": "guzzlehttp/ringphp",
@@ -167,16 +167,16 @@
         },
         {
             "name": "phly/http",
-            "version": "0.11.0",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phly/http.git",
-                "reference": "196f9d0dc11723bbabace8451218c420f90e330f"
+                "reference": "e24b6ba7ce6c3b6adbece61d22cc9a3905e1c3fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phly/http/zipball/196f9d0dc11723bbabace8451218c420f90e330f",
-                "reference": "196f9d0dc11723bbabace8451218c420f90e330f",
+                "url": "https://api.github.com/repos/phly/http/zipball/e24b6ba7ce6c3b6adbece61d22cc9a3905e1c3fd",
+                "reference": "e24b6ba7ce6c3b6adbece61d22cc9a3905e1c3fd",
                 "shasum": ""
             },
             "require": {
@@ -215,20 +215,20 @@
             "keywords": [
                 "http"
             ],
-            "time": "2015-02-17 14:28:44"
+            "time": "2015-03-10 16:39:14"
         },
         {
             "name": "psr/http-message",
-            "version": "0.9.0",
+            "version": "0.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/http-message.git",
-                "reference": "4727540cebedd52cfd5dcc98c18fc20a24ba7372"
+                "reference": "83826b66ae8353aee295f236790a6a188e5c21de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/4727540cebedd52cfd5dcc98c18fc20a24ba7372",
-                "reference": "4727540cebedd52cfd5dcc98c18fc20a24ba7372",
+                "url": "https://api.github.com/repos/php-fig/http-message/zipball/83826b66ae8353aee295f236790a6a188e5c21de",
+                "reference": "83826b66ae8353aee295f236790a6a188e5c21de",
                 "shasum": ""
             },
             "type": "library",
@@ -261,7 +261,7 @@
                 "request",
                 "response"
             ],
-            "time": "2015-02-13 01:35:55"
+            "time": "2015-03-04 22:45:46"
         },
         {
             "name": "react/promise",
@@ -311,7 +311,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "phly/http": 20,
+        "guzzlehttp/guzzle": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

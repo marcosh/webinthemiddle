@@ -1,6 +1,6 @@
 {
     "require": {
-        "phly/http": "0.11.*",
-        "guzzlehttp/guzzle": "~5.0"
+        "phly/http": "dev-master",
+        "guzzlehttp/guzzle": "dev-master"
     }
 }
