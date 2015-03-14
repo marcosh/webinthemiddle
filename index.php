@@ -25,18 +25,10 @@ $response = new Response();
 //serving the application
 $server = new Server(
     function ($request, $response, $done) {
-        $response->getBody()->write("Hello world!");
-
         parse_str($request->getUri()->getQuery(), $queryString);
 
         if (isset($queryString['forward'])) {
-            $client = new Client();
-
-            $clientRequest = $client->createRequest(
-                $request->getMethod(),
-                $request->getUri()->withPort((int) $queryString['forward'])//remove cast when pull request accepted
-            );
-            //$clientResponse = $client->send($clientRequest);
+            forward($request, $queryString['forward']);
         }
     },
     $request,
@@ -45,3 +37,25 @@ $server = new Server(
 
 //listen to incomping requests
 $server->listen();
+
+/**
+ * forwards request to the given port
+ *
+ * @param Phly\Http\Request
+ * @param int
+ * @return GuzzleHttp\Message\Response
+ */
+function forward($request, $port)
+{
+    $client = new Client();
+
+    $clientRequest = $client->createRequest(
+        $request->getMethod(),
+        $request->getUri()->withPort($port),
+        [
+            'headers' => $request->getHeaders(),
+            'body' => $request->getBody()
+        ]
+    );
+    return $client->send($clientRequest);
+}
