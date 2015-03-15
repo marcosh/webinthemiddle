@@ -25,7 +25,7 @@ $response = new Response();
 //serving the application
 $server = new Server(
     function ($request, $response, $done) {
-        parse_str($request->getUri()->getQuery(), $queryString);
+        $queryString = $request->getQueryParams();
 
         if (isset($queryString['forward'])) {
             forward($request, $queryString['forward']);
